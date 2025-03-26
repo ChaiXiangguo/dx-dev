@@ -1,0 +1,23 @@
+{
+  "envId": "{{envId}}",
+  "framework": {
+    "name": "cc-dev",
+    "plugins": {
+      "frontend": {
+        "use": "@cloudbase/framework-plugin-website",
+        "inputs": {
+          "outputPath": "dist",
+          "cloudPath": "/",
+          "ignore": [".git", ".github"],
+          "routes": [
+            {
+              "path": "/sys/admin/*",
+              "target": "http://8.130.17.142",
+              "method": "GET,POST,PUT,DELETE"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
