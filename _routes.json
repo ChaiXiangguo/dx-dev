@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "include": [
+      {
+          "pattern": "/sys/admin/*",
+          "dest": "http://8.130.17.142"
+      }
+  ]
+}

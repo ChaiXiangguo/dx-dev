@@ -1,19 +1,24 @@
 {
-  "envId": "{{envId}}",
+  "envId": "your-env-id",
   "framework": {
-    "name": "cc-dev",
+    "name": "my-app",
     "plugins": {
       "frontend": {
         "use": "@cloudbase/framework-plugin-website",
         "inputs": {
           "outputPath": "dist",
           "cloudPath": "/",
-          "ignore": [".git", ".github"],
           "routes": [
             {
               "path": "/sys/admin/*",
               "target": "http://8.130.17.142",
-              "method": "GET,POST,PUT,DELETE"
+              "method": "GET,POST,PUT,DELETE,OPTIONS",
+              "headers": {
+                "Host": "lowcode-5gjtbpg4eb2aab39-1255760028.tcloudbaseapp.com/",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
+                "Access-Control-Allow-Headers": "Content-Type,Authorization"
+              }
             }
           ]
         }
